@@ -5,12 +5,12 @@ class NavBarItems extends Component {
 
     state={
         navItems:[
-            {name:'Home'},
-            {name:'About'},
-            {name:'Ingredients'},
-            {name:'Menu'},
-            {name:'Reviews'},
-            {name:'Reservations'}
+            {name:'Home', tag:'#home'},
+            {name:'About', tag:'#about'},
+            {name:'Ingredients', tag:'#ingredients'},
+            {name:'Menu', tag:'#food-menu'},
+            {name:'Reviews', tag:'#reviews'},
+            {name:'Reservations', tag:'#reservations'}
         ],
         fixCssClasses:['nav-item', 'nav-link', 'my-nav-itm', 'smooth-menu']
     }
@@ -19,7 +19,7 @@ class NavBarItems extends Component {
         return (
           <React.Fragment>
               {this.state.navItems.map((item, index)=>{
-                        return <a className={this.state.fixCssClasses.join(' ')} key={index}>{item.name}</a>
+                        return <a className={this.state.fixCssClasses.join(' ')} key={index} href={item.tag}>{item.name}</a>
               })}
           </React.Fragment>
         );
