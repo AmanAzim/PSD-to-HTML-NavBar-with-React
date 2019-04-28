@@ -1,38 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <script src="js/jquery.scrolly.js"></script>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700|Lato|Open+Sans:400,700|Yeseva+One" rel="stylesheet">
+  <script src="js/jquery-sticky-menu.js"></script>
+  <script src="js/main.js"></script>
+
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"> <!--This line is musty or else the images and js from this pubic folder will not work-->
+</head>
+
+<body >
+<div class="top-area"  id="home">
+  <div class="top-area-background"></div>
+  <div class="header-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="logo">
+            <img src="images/logo.png">
+          </div>
+        </div>
+        <div class="col-md-10" id="myScrollSpy">
+
+          <div class="mainmanu">
+            <nav class="navbar navbar-expand-lg bg-transparent">
+              <div class="custom-navbar-toggler">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" id="navbar-items">
+                  <a class="nav-item nav-link my-nav-itm smooth-menu active"  href="#home">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-item nav-link my-nav-itm smooth-menu"   href="#about">About</a>
+                  <a class="nav-item nav-link my-nav-itm smooth-menu"  href="#ingredients">Ingredients</a>
+                  <a class="nav-item nav-link my-nav-itm smooth-menu"  href="#food-menu">Menu</a>
+                  <a class="nav-item nav-link my-nav-itm smooth-menu"  href="#reviews">Reviews</a>
+                  <a class="nav-item nav-link my-nav-itm smooth-menu"  href="#reservations">Reservations</a>
+                </div>
+              </div>
+
+              <div class="social-links">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-youtube"></i></a>
+                <a href=""><i class="fa fa-facebook-f"></i></a>
+              </div>
+            </nav>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="header-text-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="header-text">
+            <h2>the right ingredients <br>
+              for the right food</h2>
+
+            <a href="" class="btn-filled btn-bookTable">BOOK A TABLE</a>
+            <a href="" class="btn-filled btn-seeMenu">SEE THE MENU</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="root"></div>
+<div class="about-area section-padding" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 offset-md-1">
+        <div class="about-text  text-center">
+          <h2 class="section-title">Just the right food</h2>
+          <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+          <div class="author-photo">
+            <img src="images/img_cook.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5 pull-md-1">
+        <div class="dish-photo">
+          <img src="images/img_Dish.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ingredients-area section-padding" id="ingredients">
+  <div class="paralax-bg ingredient-bg"  data-velocity="0.3"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-6">
+        <div class="ingredients-text text-center">
+          <h2 class="section-title white-section-title">Fine ingredients</h2>
+          <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+          <div class="ingredient-3-img">
+            <img src="images/3-ingredients.png" alt="Ingredients">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="food-menu-area section-padding" id="food-menu">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 offset-md-1">
+        <h2 class="section-title">Appetisers</h2>
+        <div class="single-food-menu">
+          <h2>Tzatsiki <span>$3.99</span></h2>
+          <p>Refreshing traditional cucumber and garlic yoghurt dip.</p>
+        </div>
+        <div class="single-food-menu">
+          <h2>Aubergine Salad <span>$5.50</span></h2>
+          <p>Pureed eggplant, garlic, green pepper and tomato dip.</p>
+        </div>
+        <div class="single-food-menu">
+          <h2>Aubergine Salad<span>$5.25</span></h2>
+          <p>Pureed eggplant, garlic, green pepper and tomato dip.</p>
+        </div>
+
+
+
+        <h2 class="section-title">Salads</h2>
+        <div class="single-food-menu">
+          <h2>Olive Special <span>$5.99</span></h2>
+          <p>Refreshing traditional cucumber and garlic yoghurt dip.</p>
+        </div>
+        <div class="single-food-menu special">
+          <h2>Greek Salad <span>$5.50</span></h2>
+          <p>Pureed eggplant, garlic, green pepper and tomato dip.</p>
+        </div>
+        <div class="single-food-menu">
+          <h2>Gusto Salad<span>$5.25</span></h2>
+          <p>Pureed eggplant, garlic, green pepper and tomato dip.</p>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 offset-md-2">
+        <h2 class="section-title">Starters</h2>
+        <div class="single-food-menu">
+          <h2>Haloumi <span>$3.99</span></h2>
+          <p>Refreshing traditional cucumber and garlic yoghurt dip..</p>
+        </div>
+        <div class="single-food-menu">
+          <h2>Spinach Pie <span>$5.50</span></h2>
+          <p>Pureed eggplant, garlic, green pepper and tomato dip.</p>
+        </div>
+
+
+
+        <h2 class="section-title">Main Dishes</h2>
+        <div class="single-food-menu">
+          <h2>Cornish Mackerel  <span>$5.99</span></h2>
+          <p>Refreshing traditional cucumber and garlic yoghurt dip.</p>
+        </div>
+        <div class="single-food-menu special">
+          <h2>Roast Lamb <span>$5.50</span></h2>
+          <p>Pureed eggplant, garlic, green pepper and tomato dip.</p>
+        </div>
+        <div class="single-food-menu">
+          <h2>Fried Chicken<span>$5.25</span></h2>
+          <p>Pureed eggplant, garlic, green pepper and tomato dip.</p>
+        </div>
+        <div class="single-food-menu">
+          <h2>Pastitsio<span>$5.99</span></h2>
+          <p>Pureed eggplant, garlic, green pepper and tomato dip.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="testimonial-area section-padding" id="reviews">
+  <div class="paralax-bg testimonial-bg" data-velocity="0.3"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="testimonial-list text-center">
+
+          <h2 class="section-title white-section-title">Guest Reviews</h2>
+
+          <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="single-testimonial-item">
+                  <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+                  <p class="testimonial-author">- food inc, New York</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="single-testimonial-item">
+                  <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+                  <p class="testimonial-author">- food inc, New York</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="single-testimonial-item">
+                  <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+                  <p class="testimonial-author">- food inc, New York</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contact-area section-padding" id="reservations">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3">
+        <div class="contact-food-img1">
+          <img src="images/contact-food-1.jpg">
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="contact-food-img2">
+          <img src="images/contact-food-2.jpg">
+        </div>
+      </div>
+
+      <div class="col-md-5 offset-md-1">
+        <div class="contact-text text-center">
+          <h2 class="section-title">Just the right food</h2>
+          <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.<br><br>
+            Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.</p>
+
+          <div class="contact-form">
+            <form >
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="">Name</label>
+                  <input type="text" placeholder="your name *">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="">Email</label>
+                  <input type="email" placeholder="your email *">
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="">Date</label>
+                  <input type="date" placeholder="date *">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="">Party number</label>
+                  <select name="" id="">
+                    <option value="">Party number</option>
+                    <option value="">Party id</option>
+                  </select>
+                </div>
+              </div>
+
+              <button >Book now!</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer-area section-padding text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="footer-widget">
+          <h2 class="section-title white-section-title">About Us</h2>
+          <p>Lambda's new and expanded Chelsea location represents a truly authentic <b>Greek</b> patisserie, featuring breakfasts of fresh croissants and steaming bowls of café.<br>
+            Lamda the best restaurant in town</p>
+        </div>
+      </div>
+      <div class="col-md-3  offset-md-1">
+        <div class="footer-widget">
+          <h2 class="section-title white-section-title">Opening Hours</h2>
+          <p><b>Mon-Thu:</b> 7:00am-8:00pm<br>
+            <b>Fri-Sun:</b> 7:00am-10:00pm</p>
+          <div class="footer-payment-cards">
+            <i class="fa fa-cc-amex"></i>
+            <i class="fa fa-cc-paypal"></i>
+            <i class="fa fa-cc-visa"></i>
+            <i class="fa fa-cc-discover"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3  offset-md-1">
+        <div class="footer-widget">
+          <h2 class="section-title white-section-title">Our Location</h2>
+          <p><b>19th Paradise Street Sitia
+            128 Meserole Avenue</b></p>
+          <div class="footer-social-icons">
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-youtube"></i></a>
+            <a href=""><i class="fa fa-facebook-f"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>

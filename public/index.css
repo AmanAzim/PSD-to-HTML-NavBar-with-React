@@ -1,0 +1,491 @@
+.alignleft {
+  float: left;
+  margin-right: 15px;
+}
+.alignright {
+  float: right;
+  margin-left: 15px;
+}
+.aligncenter {
+  display: block;
+  margin: 0 auto 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+input:focus, button:focus, textarea:focus, a:focus {outline: none}
+
+
+/*All the text in this template coming undet these all header tags will have the following properties*/
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 15px;
+  font-weight: 700;
+  font-family: 'Yeseva One', cursive;
+  color: #CC9900;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+p:last-child {
+  margin-bottom: 0
+}
+
+/*Body*/
+.body {
+  height: 100%;
+  font-family: 'Gentium Book Basic', serif;
+  position: relative;
+}
+
+
+/*Top area and its background image and Logo*/
+.top-area {
+  position: relative;
+}
+.top-area-background {
+  background: url("images/background.jpg");
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  BACKGROUND-SIZE: cover;
+}
+
+
+/*********************************************/
+
+
+
+/*Main manu and NavBar and Social media Icons*/
+.header-area {
+  width: 100%;
+  z-index: 999;
+  position: relative; /*relative*/
+}
+.is-sticky .header-area:after { /*When a element will have ".is-sticky" as parent class and ".header-area" as own class then this style will be applied. Notice the space between the name of two classes*/
+  content: "";
+  background: black;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;/*z-index: -1;*/
+}
+.is-sticky .header-area{ /*this isa must to make the sticky header work and clickable*/
+  position: fixed !important;
+  z-index: 999 !important;
+}
+
+.logo img{
+  /*background: url(images/logo.png);*/
+  text-align: left;
+  height: 93px;
+  width: 157px;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 9px;
+}
+.is-sticky .logo img{
+  height: 50px;
+  width: auto;
+  padding: 0px 45px;
+}
+
+.mainmanu  {
+  display: inline-block;
+  float: none;
+  background-color: transparent !important;
+  /* margin-left: 73px; */
+  text-align: right;
+  position: relative;
+  left: 75px;
+}
+
+
+.navbar{
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-nav {
+    float: left !important;
+  }
+}
+
+.nav-item.nav-link.my-nav-itm{
+  color: whitesmoke;
+  display: inline-block;
+  float: none;
+  font-size: 20px;
+  position: relative;
+  top: 0;
+  width: 100%;
+  margin-left: 10px;
+  padding: 35px 15px;
+  font-family: 'Gentium Book Basic', serif;
+}
+.nav-item.nav-link.my-nav-itm:hover{
+  color: white;
+  text-decoration:none;
+}
+.nav-item.nav-link.my-nav-itm.active {
+  color: white ;
+}
+.nav-item.nav-link.my-nav-itm.active::before{
+  content: ''; /*This is must for sudo element*/
+  position: absolute;
+  top: -8px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  left: -3px;
+}
+.is-sticky .nav-item.nav-link.my-nav-itm {
+  padding: 15px 24px;
+  font-size: 16px;
+}
+.is-sticky .nav-item.nav-link.my-nav-itm.active {
+  color: orange;
+}
+
+
+.custom-navbar-toggler button{
+  background-color: rgba(86, 91, 78, 0.8);
+  opacity: 0.8;
+  border-radius: .25rem;
+  width: 73px;
+  height: 49px;
+  margin-left: 140px;
+  margin-top: 30px;
+  padding: 12px 12px
+
+}
+.line{
+  width: 100%;
+  float: left;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 5px;
+
+}
+
+
+.social-links {
+  top: 0px;
+  right: 0px;
+  position: relative;
+}
+.social-links a { /*Means this style will be applied to all the <a/> tags under "social-links" class */
+  color: #db9e10;
+  padding: 0px 5px;
+  display: inline-block;
+}
+
+
+.header-area:before, .nav-item.nav-link.my-nav-itm, .logo img {
+  transition: 0.4s;
+}
+/***************************************/
+
+
+
+
+/*******Header Text Area*********/
+.header-text {
+  padding: 100px 0px;
+}
+.header-text h2 {
+  background: url(images/below_background_designt.png);
+  font-family: 'Yeseva One', cursive;
+  color: white;
+  font-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 70px;
+  margin-bottom: 40px;
+}
+
+/*If we need a transparent gackground for a element such as this Button then we should do it using "class:after" but not by editing the background of the class*/
+.btn-filled.btn-bookTable { /* here we wrote 2 classes it means if both class are used in one element only then this style properties will apply*/
+  position: relative;
+  z-index: 1;
+  color: #E2E2E2;
+  display: inline-block;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  margin: 0px 13px;
+}
+.btn-filled.btn-bookTable:after {
+  content: '';
+  z-index: -1;
+  background: #252A2C;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.btn-filled.btn-seeMenu {
+  position: relative;
+  z-index: 1;
+  color: #E2E2E2;
+  display: inline-block;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  margin: 0px 13px;
+}
+.btn-filled.btn-seeMenu:after{
+  content: '';
+  z-index: -1;
+  background: #D2BA82;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+/***************************************/
+
+
+
+/*********About section**********/
+.about-area, .contact-area {
+  background: url(images/about_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.section-padding {
+  padding: 74px;
+}
+
+.about-text {
+  margin-top: 20px;
+}
+.section-title {
+  color: #CC9900; /*Dont need to give font-family because we have already defined all the font for text under <h2> tag before*/
+  background: url("images/about_section_below_title_line.png");
+  background-repeat: no-repeat; /*the image will not repeat*/
+  background-position: center bottom; /*the background image will be placed in the bottom of the center of the container/class*/
+  background-attachment: scroll; /*the image will scroll with the text it will not be fixed in one position*/
+  padding-bottom: 35px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.author-photo {
+  margin-top: 53px;
+  margin-left: 85px;
+}
+.dish-photo {
+  z-index: -1;
+}
+
+/***************************************/
+
+
+/*********Ingredients Section***********/
+.ingredients-area{
+  position: relative;
+}
+.paralax-bg { /*we are going to use this class for all the background's default properties*/
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.ingredient-bg{
+  background-image: url("images/ingredients-bg.jpg");
+}
+
+
+
+.ingredients-text {
+  z-index: 1;
+  position: relative;
+  color: white;
+  padding: 80px
+}
+.ingredients-text:before, .testimonial-list:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .67;
+}
+.section-title.white-section-title{
+  color: white;
+  background: url("images/ingredient_section_below_title_line.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.ingredient-3-img {
+  padding-top: 56px;
+}
+/*******************************************************/
+
+/************Food menu area***********************/
+.food-menu-area {
+  background: url("images/food-menu-section-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.single-food-menu {
+  margin-bottom: 40px;
+}
+.single-food-menu h2{
+  font-size: 21px;
+  border-bottom: 1px solid #E6D8AE;
+  padding-bottom: 10px;
+  margin-bottom: 10px
+}
+.single-food-menu h2 span {
+  float: right;
+}
+.single-food-menu p{
+  margin: 0px;
+}
+.single-food-menu.special {
+  border: 1px solid #E6D8AE;
+  padding: 10px;
+  position: relative;
+}
+.single-food-menu.special:before {
+  content: 'Special';
+  color: white;
+  background-color: #DABF75;
+  position: absolute;
+  top: -21px;
+  left: 288px;
+  padding: 0px 9px;
+  font-size: 14px;
+}
+/*******************************************************/
+
+
+/***************Testimonial area*******************/
+.testimonial-area {
+  position: relative;
+}
+.testimonial-bg {
+  background-image: url("images/testimonial-bg.jpg");
+}
+/*for we defined the same properties for the testimonial-list's light black background with the   class properties we used for ingredient-text:before. see above*/
+.testimonial-list {
+  color: white;
+  position: relative;
+  z-index: 1;
+  padding: 76px 74px;
+}
+
+.single-testimonial-item p{
+  font-size: 25px;
+  font-family: 'Gentium Book Basic', serif;
+  color: #9A9D9A;
+}
+p.testimonial-author {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  margin-top: 50px;
+  color: white;
+}
+#testimonial-carousel:before {
+  font-family: "FontAwesome";
+  content: "\f10d";
+  position: absolute;
+  top: -31px;
+  left: -25px;
+  color: #9A9D9A;
+  font-size: 34px;
+}
+/******************************************************************/
+
+/*****************Contact Area*************************************/
+.contact-form {
+  text-align: left;
+  margin-top: 9px;
+}
+.contact-form label {
+  color: #CC9900;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
+}
+.contact-form input[type="text"], input[type="email"], input[type="date"], select{ /*to select multiple input type elements*/
+  width: 100%;
+  border: 1px solid #C8C6C6;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.contact-form input[type="text"]:hover, input[type="email"]:hover, input[type="date"]:hover, select:hover {
+  border: 1px solid #CC9900;
+}
+.contact-form button {
+  background-color: #CC9900;
+  color: white;
+  float: inherit;
+  border: none;
+  padding: 5px 54px;
+  margin: auto;
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+/******************************************************************/
+
+
+/************************Footer area*******************************/
+.footer-area {
+  background: black;
+  color: #E8E8E8;
+}
+.footer-area h2 {
+  color: white;
+  font-size: 21px;
+}
+.footer-area p {
+  font-family: 'Open Sans', sans-serif;
+
+}
+.footer-area b {
+  color: white;
+}
+
+.footer-payment-cards {
+  color: white;
+  margin-top: 49px;
+}
+.footer-payment-cards i{
+  margin-left: 8px;
+}
+
+.footer-social-icons {
+  color: white;
+  margin-top: 49px;
+  font-size: 17px;
+}
+.footer-social-icons a{
+  color: white;
+  margin-left: 8px;
+}
