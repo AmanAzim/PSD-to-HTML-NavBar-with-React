@@ -24,6 +24,10 @@ $(document).ready(function(){
         // End if
     });
 
+    $("body").scrollspy({
+        target: '#scrollSpy-nav',
+        offset: 10
+    });
 
 
 
