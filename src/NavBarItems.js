@@ -5,21 +5,42 @@ class NavBarItems extends Component {
 
     state={
         navItems:[
-            {name:'Home', tag:'#home'},
-            {name:'About', tag:'#about'},
-            {name:'Ingredients', tag:'#ingredients'},
-            {name:'Menu', tag:'#food-menu'},
-            {name:'Reviews', tag:'#reviews'},
-            {name:'Reservations', tag:'#reservations'}
+            {name:'Home', tag:'#home', isActive:false},
+            {name:'About', tag:'#about', isActive:false},
+            {name:'Ingredients', tag:'#ingredients', isActive:false},
+            {name:'Menu', tag:'#food-menu', isActive:false},
+            {name:'Reviews', tag:'#reviews', isActive:false},
+            {name:'Reservations', tag:'#reservations', isActive:false}
         ],
         fixCssClasses:['nav-item', 'nav-link', 'my-nav-itm', 'smooth-menu']
+    };
+
+    addActiveHandler=(index)=>{
+
+        let tempNavItm=[...this.state.navItems];
+
+        for(let i=0; i<tempNavItm.length; i++){
+
+            tempNavItm[i].isActive=false;
+
+            if(i==index){
+                tempNavItm[i].isActive=true;
+            }
+            console.log(tempNavItm[i]);
+        }
+
+        this.setState({navItems:[...tempNavItm]})
+
     }
+
     render() {
-        //let items=
+
         return (
           <React.Fragment>
               {this.state.navItems.map((item, index)=>{
-                        return <a className={this.state.fixCssClasses.join(' ')} key={index} href={item.tag}>{item.name}</a>
+                        return <a className={'nav-item nav-link my-nav-itm smooth-menu '+(item.isActive? 'active': '')}
+                                  key={index}
+                                  href={item.tag} onClick={()=>this.addActiveHandler(index)}>{item.name}</a>
               })}
           </React.Fragment>
         );

@@ -25,10 +25,7 @@ $(document).ready(function(){
     });
 
 
-    $("body").scrollspy({
-        target: '.navbar',
-        offset: 10
-    });
+
 
     //to activate parallex effect //but making problem and without it the parallex effect is working
     //$('.paralax-bg').scrolly({bgParallax: true});
